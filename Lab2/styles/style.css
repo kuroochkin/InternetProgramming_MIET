@@ -8,9 +8,8 @@ body {
   }
     
   .column {
-    height: 200px;
+    height: 260px;
   }
-  
   
   
   .green {
@@ -25,10 +24,21 @@ body {
     background-color: pink;
   }
     
-  @media (max-width: 600px) {
+   @media screen and (max-width: 480px) {
     .container {
       display: flex;
       flex-direction: column;
+    }
+    .brown{
+      width:100%;
+    }
+    .green{
+      display: none;
+      
+    }
+    .pink{
+      display: none;
+      
     }
   }
   
@@ -36,8 +46,8 @@ body {
     .flex-md-row-reverse {
       flex-direction: column-reverse;
     }
-  }
-  
+  } 
+
   .col, .col-xx {
     height: 100%;
   }
