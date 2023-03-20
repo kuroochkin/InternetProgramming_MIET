@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 1</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div class="container">
+  <div class="column green"></div>
+  <div class="column brown">
+    <form name="Form"  method="post">
+        Ввод 1: <input type="text" name="language"> 
+        <br><br>
+
+        Ввод 2: <select name="shirts" id="shirt-colors">
+            <option value="">Выберите что-то!</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue </option>
+            <option value="orange">Orange </option>
+          </select>
+          <br><br>
+          Ввод 3:
+          <br>
+
+           <label>
+            <input type="checkbox"  name="languages" value="HTML">
+            Хочу изучать HTML
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" name="languages" value="CSS">
+            Хочу изучать CSS
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" name="languages" value="JS">
+            Хочу изучать JS
+          </label>
+          
+       <input type="submit" onclick="return validateForm()" value="Отправить">
+
+       </form> 
+    <!-- <form class="form" id="myForm" role="form">
+        <div class = "form-group">
+            <label for="inputLanguage">Введите на русском или на латыни</label>
+            <input type="text" class="form-control" name="language" id="inputLanguage" placeholder="Что-то">
+        </div>
+        <button type="submit" class="btn btn-default">Отправить</button>
+    </form>
+
+    <form class="form" id="myForm1" role="form">
+        <div class = "form-group">
+            <label for="inputSelect">Выберите что-то</label>
+            <select name="cars" id="cars" form="carform">
+                <option value="">--Please choose an option--</option>
+                <option value="volvo">Volvo</option>
+                <option value="lada">Lada</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+              </select>
+        </div>
+        <button type="submit" class="btn btn-default">Отправить</button> -->
+    </form>
+
+  </div>
+  <div class="column pink"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+<script src="settings.js"></script>
+
+</body>
+</html>
