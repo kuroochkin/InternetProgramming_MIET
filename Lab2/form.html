@@ -16,40 +16,41 @@
 <body>
 
     <div class="container">
-  <div class="column green"></div>
+  <div class="column green" id="green"></div>
   <div class="column brown">
     <form name="Form"  method="post">
-        Ввод 1: <input type="text" name="language"> 
+        Ввод 1: <input type="text" id="lang" name="language" onchange="validateFirst()"> 
         <br><br>
 
-        Ввод 2: <select name="shirts" id="shirt-colors">
-            <option value="">Выберите что-то!</option>
+
+        Ввод 2: <select name="shirts" id="shirt-colors" onsubmit="submitForm()" onclick="validateSecond()">
             <option value="red">Red</option>
             <option value="blue">Blue </option>
             <option value="orange">Orange </option>
+            <option value="">Ничего из этого</option>
           </select>
           <br><br>
           Ввод 3:
           <br>
 
            <label>
-            <input type="checkbox"  name="languages" value="HTML">
+            <input type="checkbox" checked="checked"  id="languages1" name="languages1" value="HTML" onchange="return validateThird()">
             Хочу изучать HTML
           </label>
           <br>
           <label>
-            <input type="checkbox" name="languages" value="CSS">
+            <input type="checkbox" id="languages2" name="languages2" value="CSS" >
             Хочу изучать CSS
           </label>
           <br>
           <label>
-            <input type="checkbox" name="languages" value="JS">
+            <input type="checkbox" checked="checked" id="languages3" name="languages3" value="JS" onchange="return validateThird()">
             Хочу изучать JS
           </label>
           
-       <input type="submit" onclick="return validateForm()" value="Отправить">
-
+       <input type="submit" onclick="return validateFirst(); return validateSecond(); return validateThird();" value="Отправить">
        </form> 
+
     <!-- <form class="form" id="myForm" role="form">
         <div class = "form-group">
             <label for="inputLanguage">Введите на русском или на латыни</label>
@@ -73,11 +74,12 @@
     </form>
 
   </div>
-  <div class="column pink"></div>
+  <div class="column pink" id="pink"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 <script src="settings.js"></script>
+<script src="cookie.js"></script>
 
 </body>
 </html>
