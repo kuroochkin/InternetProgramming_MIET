@@ -1,28 +1,29 @@
+
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Использование метода .getJSON()</title>
-		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-		<script>
-	$(document).ready(function() {
-	  $("button").click(function() { // задаем функцию при нажатиии на элемент <button>
-		var url = "test.json";
-	    $.getJSON(url, function ( data, textStatus, jqXHR ) { // указываем url и функцию обратного вызова
-	      var out = ""; // создаем пустую строковую переменную
-	      for ( key in data ) { // создаем цикл for in
-		out += ( key + ": " + data[key] + "<br>"); // добавляем в переменную все ключи объекта и их значения
-	      };
-	      $("div").html(out); // добавляем в элемент <div> значение переменной
-	    })
-	  })
-	});
-		</script>
-	</head>
-	<body>
-		<button>About</button>
-		<div></div>
-	</body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calc</title>
+    <style>
+        label {
+            display: block;
+            font-size: 30px;
+        }
+        input {
+            width: 300px;
+            height: 50px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <label for="country">Страна</label>
+    <input id="country" type="text">
+    <label for="capital">Столица</label>
+    <input id="capital" type="text">
+
+    <script src="script.js"></script>
+</body>
 </html>
-
-<script src="test.json"></script>
-
