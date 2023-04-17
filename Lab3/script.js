@@ -1,17 +1,23 @@
-const inputCountry = document.querySelector('#country');
-const inputCapital = document.querySelector('#capital');
+const countrySelect = document.getElementById('country');
+const citySelect = document.getElementById('city');
 
-inputCountry.addEventListener('input', () => {
+countrySelect.addEventListener('change', function() {
+    if (countrySelect.value == '') {
+        citySelect.innerHTML = '<option value=""> Выберите город </option>';
+        return;
+    }
+
     const request = new XMLHttpRequest();
-
-    request.open('GET', 'countries.json');
-    request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-    request.send();
-
-    request.addEventListener('readystatechange', () => {
-        if(request.readyState === 4 && request.status === 200){
-            const data = JSON.parse(request.response);
-            inputCapital.value = data.countries[inputCountry.value]; 
+    request.open('GET', 'countries.json'); 
+    request.onload = function() {
+        if (request.status == 200) {
+            const cities = JSON.parse(request.responseText)[countrySelect.value];
+            let options = '<option value=""> Выберите город </option>';
+            cities.forEach(function(city) {
+                options += `<option value="${city}">${city}</option>`;
+            });
+            citySelect.innerHTML = options; 
         }
-    });
+    };
+    request.send();
 });
