@@ -11,10 +11,7 @@ inputCountry.addEventListener('input', () => {
     request.addEventListener('readystatechange', () => {
         if(request.readyState === 4 && request.status === 200){
             const data = JSON.parse(request.response);
-            console.log(request.response);
-            
             inputCapital.value = data.countries[inputCountry.value]; 
-            
         }
     });
 });
