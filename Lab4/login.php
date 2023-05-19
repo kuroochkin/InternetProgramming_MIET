@@ -37,6 +37,6 @@ session_start();
 $_SESSION['username'] = $username;
 
 // перенаправляем пользователя на главную страницу
-header("Location: index.html");
+header("Location: upload.php");
 exit;
 ?>
